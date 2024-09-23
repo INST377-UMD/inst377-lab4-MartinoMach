@@ -1,0 +1,45 @@
+body {
+    font-family: 'Times New Roman', serif;
+    background-color: lightblue; /* Set the background color to light blue */
+}
+
+.row {
+    display: flex; /* Use Flexbox to arrange sections */
+    justify-content: space-between; /* Space out sections */
+    margin: 10px; /* Margin around rows */
+}
+
+.section {
+    border: 2px solid white; /* White edges */
+    background-color: rgb(120, 6, 173); /* Purple background for sections */
+    padding: 10px;
+    flex: 1; /* Allow sections to grow equally */
+    margin: 10px; /* Margin between sections */
+    text-align: center;
+    color: white; /* Text color for readability */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 0px;
+}
+
+.section_small {
+    border: 2px solid white; /* White edges */
+    background-color: rgb(120, 6, 173); /* Purple background for sections */
+    padding: 10px;
+    flex: 1; /* Allow sections to grow equally */
+    margin: 15px; /* Margin between sections */
+    text-align: center;
+    color: white; /* Text color for readability */
+    border-radius: 10px; /* Rounded corners */
+
+}
+
+input, button {
+    padding: 3px;
+    font-size: 12px;
+}
+
+.small-heading {
+    font-size: 14px; /* Smaller font size for headings */
+    margin: 0 10px 10px 0; /* Adjust margins */
+    display: inline-block; /* Align next to the input */
+}

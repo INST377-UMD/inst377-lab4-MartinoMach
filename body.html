@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INST377 - Lab 4</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+
+    <h1 id="main-heading">INST377 - Lab 4</h1>
+
+    <div class="row">
+        <div class="section" id="alert-section">
+            <form id="alert-form">
+                <h2 class="small-heading">Name:</h2>
+                <input type="text" id="name">
+                <button type="submit">Alert Me!</button>
+            </form>
+        </div>
+
+        <div class="section_small" id="color-section">
+            <button id="color-button">Change Color</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="section" id="text-tester-section">
+            <form id="text-tester-form">
+                <h2 class="small-heading">Text Tester:</h2>
+                <input type="text" id="text-input">
+                <button type="button" id="validate-button">Validate Text</button>
+            </form>
+        </div>
+
+        <div class="section_small" id="add-text-section">
+            <button id="add-text-button">Add Text</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript code remains unchanged
+        document.getElementById('alert-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            alert(`Hi ${name}!`);
+        });
+
+        let isBlue = true;
+        document.getElementById('color-button').addEventListener('click', function() {
+            document.body.style.backgroundColor = isBlue ? 'green' : 'blue';
+            isBlue = !isBlue;
+        });
+
+        const validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+        document.getElementById('validate-button').addEventListener('click', function() {
+            const text = document.getElementById('text-input').value;
+            if (validation.test(text)) {
+                alert('YOU ARE NOT SPECIAL!');
+            } else {
+                alert('Whats Poppin!');
+            }
+        });
+
+        document.getElementById('add-text-button').addEventListener('click', function() {
+            const heading = document.getElementById('main-heading');
+            heading.textContent += ' Add Text';
+        });
+    </script>
+
+</body>
+</html>
+
